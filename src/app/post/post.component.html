@@ -5,12 +5,13 @@
 <div class="col-sm-6">
 	<h2>{{post.title}}</h2>
 	<p>{{post.link}}</p>
-	<div class="row">
-		<div class="col">
+	<div class="row justify-content-start">
+		<div class="col-2">
 			<fa-icon [icon]="arrowUpIcon" (click)="updatePoints(1)"></fa-icon>
 		</div>
-		<div class="col">
+		<div class="col-2">
 			<fa-icon [icon]="arrowDownIcon" (click)="updatePoints(-1)"></fa-icon>
 		</div>
+		<div class="col-8"></div>
 	</div>
 </div>

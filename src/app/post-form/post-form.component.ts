@@ -9,16 +9,19 @@ import { PostsService } from '../posts.service';
 })
 export class PostFormComponent implements OnInit {
 
-  post : Post;
+  title = "";
+  link = "";
+
 
   constructor(private postsService : PostsService) { }
 
   ngOnInit(): void {
-    this.post = new Post();
   }
 
   onAddPost() {
-    this.postsService.addPost(this.post);
+    this.postsService.addPost(new Post(this.title,this.link));
+    this.title = "";
+    this.link = "";
     console.log(this.postsService.getPosts());
   }
 
