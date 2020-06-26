@@ -1,0 +1,16 @@
+<div class="col-sm-6" style="background-color: gray;">
+	<p>{{post.points}}</p>
+</div>
+
+<div class="col-sm-6">
+	<h2>{{post.title}}</h2>
+	<p>{{post.link}}</p>
+	<div class="row">
+		<div class="col">
+			<fa-icon [icon]="arrowUpIcon" (click)="updatePoints(1)"></fa-icon>
+		</div>
+		<div class="col">
+			<fa-icon [icon]="arrowDownIcon" (click)="updatePoints(-1)"></fa-icon>
+		</div>
+	</div>
+</div>
