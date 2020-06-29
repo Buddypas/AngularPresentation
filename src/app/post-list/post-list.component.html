@@ -1,3 +1,11 @@
-<div *ngFor="let post of posts; let i = index;">
-  <app-post class="row" [post] = "post" [index] = "i" style="margin-bottom: 20px;"></app-post>
+<div *ngIf="posts.length !== 0; else noPosts">
+  <div *ngFor="let post of posts; let i = index;">
+    <app-post 
+    class="row d-flex justify-content-center post" 
+    [post] = "post" 
+    [index] = "i"></app-post>
+  </div>
 </div>
+<ng-template #noPosts>
+  <h4>There are no posts at the moment.</h4>
+</ng-template>
